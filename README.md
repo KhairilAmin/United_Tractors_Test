@@ -4,7 +4,7 @@ This project is a test application developed as part of the United Tractors asse
 
 ## Features
 
-- **User Authentication**: Basic login and registration functionality.
+- **User Authentication**: Using JWT
 - **CRUD Operations**: Create, read, update, and delete features for managing data.
 - **Database Integration**: MySQL is used for database management.
 
@@ -12,7 +12,7 @@ This project is a test application developed as part of the United Tractors asse
 
 ### Prerequisites
 
-- PHP >= 7.3
+- PHP >= 8
 - Composer
 - MySQL
 
