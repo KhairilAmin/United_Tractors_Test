@@ -1,7 +1,3 @@
-Here’s a sample README for the "United_Tractors_Test" project:
-
----
-
 # United Tractors Test
 
 This project is a test application developed as part of the United Tractors assessment. It demonstrates the use of [Laravel](https://laravel.com/) for building a web application with a simple and intuitive structure.
