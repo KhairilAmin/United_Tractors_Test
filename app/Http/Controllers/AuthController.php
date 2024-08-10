@@ -1,9 +1,11 @@
 <?php
   
 namespace App\Http\Controllers;
-  
+
+use App\Helpers\Uuid;
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Validator;
 
 class AuthController extends Controller
@@ -26,12 +28,16 @@ class AuthController extends Controller
         }
   
         $user = new User;
+        $user->id = Uuid::getId();
         $user->name = request()->name;
         $user->email = request()->email;
         $user->password = bcrypt(request()->password);
         $user->save();
+
+        $data["email"] = $user->email;
+        $data["name"] = $user->name;
   
-        return response()->json($user, 201);
+        return response()->json($data, 201);
     }
   
   

@@ -11,7 +11,6 @@ use PHPOpenSourceSaver\JWTAuth\Contracts\JWTSubject;
 class User extends Authenticatable implements JWTSubject    
 {
     use HasFactory, Notifiable;
-
     /**
      * The attributes that are mass assignable.
      *
@@ -22,6 +21,8 @@ class User extends Authenticatable implements JWTSubject
         'email',
         'password',
     ];
+    
+    protected $keyType = 'string';
 
     /**
      * The attributes that should be hidden for serialization.
